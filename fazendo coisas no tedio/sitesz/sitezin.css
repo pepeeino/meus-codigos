@@ -1,0 +1,61 @@
+img 
+{
+    width: 200px;
+    float: right;
+}
+
+
+body 
+{
+    font-family: sans-serif;
+    background-color: #ffffff;
+    margin: 0;
+    padding: 0;
+}
+
+#body
+{
+    background-image:url("https://cdn.discordapp.com/attachments/1193724529181196401/1258901024022855922/YouCut_20240705_181900005.gif?ex=6689ba71&is=668868f1&hm=ecb7060ebb1dd451a45fa19f7b0a1cd778ffa9cc05f9dff6dfafee31b5c2b0be&");
+    background-size:cover;
+    background-size:100%;
+    background-repeat: repeat-y;
+    background-attachment: fixed;
+    height:100%;
+    width:100%;
+}
+
+h1 
+{
+    font-family: sans-serif;
+    color:#000;
+    border: 2px solid transparent;
+    border-radius: 5px;
+    width: 100%;
+    max-width: 500px;
+    text-align: center;
+    padding: 10px;
+    margin: 20px auto;
+}
+
+p
+{
+    font-family: sans-serif;  
+    color:rgb(45, 45, 45);
+}
+
+#item1, #item2, #item3, #item4, #item5,
+ #item6, #item7, #item8, #item9, #item10
+{
+    font-family: sans-serif;
+    width: calc(50% - 20px);
+    max-width: 1200px;
+    height: 300px;
+    border-radius: 5px;
+    border: 3px solid gray;
+    padding: 8px;
+    margin-bottom: 20px;
+    margin: 20px auto;
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+}
