@@ -9,6 +9,7 @@ function validar_login() {
 
     if (user === 'admin' && pass === 'admin123') {
         alert('Login successful!');
+        location.href = '/pagina1/site.html';
     } else if (user === '' || pass === '') {
         alert('Preencha todos os campos');
     } else {
