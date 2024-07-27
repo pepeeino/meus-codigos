@@ -1,7 +1,7 @@
 document.getElementById('loginForm').addEventListener('submit', function(event) {
     event.preventDefault();
     validar_login();
-});
+ });
 
 function validar_login() {
     const user = document.getElementById('user').value;
