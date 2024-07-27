@@ -7,10 +7,11 @@ function validar_login() {
     const user = document.getElementById('user').value;
     const pass = document.getElementById('pass').value;
 
-    if (user === '' || pass === '') {
-        alert('Preencha tudo');
-    } else {
-        // Perform login action
+    if (user === 'admin' && pass === 'admin123') {
         alert('Login successful!');
+    } else if (user === '' || pass === '') {
+        alert('Preencha todos os campos');
+    } else {
+        alert('Usuario e senha incorretos');
     }
 }

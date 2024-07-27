@@ -31,7 +31,18 @@ button{
  padding: 0 25px;
  display:block;
  margin-bottom: 15px;
- transition: 3.5s;
+}
+
+button:hover{
+ transform: translatey(-2px) translateX(+1px);
+ transition:0.3s ease;
+ border-color:#dfdfdf56;
+}
+
+button:active{
+ transition: 0.3s;
+ color: #dfdfdf71;
+ border-color: #555555;
 }
 
 input{
