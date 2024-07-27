@@ -3,7 +3,7 @@ document.getElementById('loginForm').addEventListener('submit', function(event) 
     validar_login();
  });
 
-function validar_login() {
+ function validar_login() {
     const user = document.getElementById('user').value;
     const pass = document.getElementById('pass').value;
 
