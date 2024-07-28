@@ -9,10 +9,13 @@ document.getElementById('loginForm').addEventListener('submit', function(event) 
 
     if (user === 'admin' && pass === 'admin123') {
         alert('Login successful!');
-        location.href = 'http://127.0.0.1:5500/pagina1/site.html';
+        location.href = './site.html';
     } else if (user === '' || pass === '') {
         alert('Preencha todos os campos');
     } else {
         alert('Usuario e senha incorretos');
     }
 }    
+
+/*tem q colocar return false no 'submit' se n ele n ira redirecionar para a outra pagina, mas 
+mesmo se eu conseguisse colocar ele n iria funcionar pois o GET n esta funcionando corretamente*/
