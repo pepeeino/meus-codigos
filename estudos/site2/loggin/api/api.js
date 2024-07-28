@@ -15,4 +15,4 @@ document.getElementById('loginForm').addEventListener('submit', function(event) 
     } else {
         alert('Usuario e senha incorretos');
     }
-}
+}    
