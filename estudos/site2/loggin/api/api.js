@@ -9,7 +9,7 @@ document.getElementById('loginForm').addEventListener('submit', function(event) 
 
     if (user === 'admin' && pass === 'admin123') {
         alert('Login successful!');
-        location.href = '/site1/pagina1/site.html';
+        location.href = 'http://127.0.0.1:5500/pagina1/site.html';
     } else if (user === '' || pass === '') {
         alert('Preencha todos os campos');
     } else {
