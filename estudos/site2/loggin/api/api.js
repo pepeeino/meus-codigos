@@ -9,7 +9,7 @@ document.getElementById('loginForm').addEventListener('submit', function(event) 
 
     if (user === 'admin' && pass === 'admin123') {
         alert('Login successful!');
-        location.href = '/meus-codigos/estudos/site1/pagina1/site.html';
+        location.href = '/estudos/site1/pagina1/site.html';
     } else if (user === '' || pass === '') {
         alert('Preencha todos os campos');
     } else {
