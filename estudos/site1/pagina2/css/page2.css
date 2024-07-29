@@ -37,16 +37,18 @@ a {
 /*separando "#"*/
 
 #menubar {
-  margin-top: 27;
+  margin-top: 105;
   float: right;
   background-color: #c3ccff;
   width: 300px;
+  z-index: 999;
 }
 
 #menulist {
   padding: 0;
   font-size: 16px;
   font-family: verdana, sans-serif;
+  z-index: 999;
 }
 #div2 {
   font-family: sans-serif;
@@ -60,7 +62,7 @@ a {
   border-radius: 5px;
   border: 3px #ffffff;
   margin-bottom: 20px;
-  z-index: 9999;
+  z-index: 0;
 }
 #div1 {
   font-family: sans-serif;
@@ -74,7 +76,7 @@ a {
   border-radius: 5px;
   border: 3px #ffffff;
   margin-bottom: 20px;
-  z-index: 9999;
+  z-index: 0;
 }
 /*separar os codigos com "." de "#"*/
 .menuitem {
