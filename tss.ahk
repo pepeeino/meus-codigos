@@ -1,4 +1,3 @@
-
 Run, "C:\Program Files (x86)\RAMMap\RAMMap.exe"
 
 WinWaitActive, RAMMap ahk_class RAMMap

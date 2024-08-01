@@ -1,3 +1,3 @@
 ::start program
 @echo off
-start "" "C:\"
+start "" "C:\Users\HP\Desktop\progamaçaõ\tss.ahk"
