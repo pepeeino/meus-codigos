@@ -17,7 +17,7 @@ document
       .getElementById("resultado")
       .getAttribute("data-resultado");
 
-    if (resultado == "1234") {
+    if (resultado == "") {
       alert("aqueles q partiram sempre estarão conosco");
     } else {
       alert("i love math");
