@@ -9,17 +9,3 @@ document.getElementById("somar").addEventListener("click", function () {
     .getElementById("resultado")
     .setAttribute("data-resultado", resultado);
 });
-
-document
-  .getElementById("resultado")
-  .addEventListener("DOMSubtreeModified", function () {
-    var resultado = document
-      .getElementById("resultado")
-      .getAttribute("data-resultado");
-
-    if (resultado == "") {
-      alert("aqueles q partiram sempre estarão conosco");
-    } else {
-      alert("i love math");
-    }
-  });
