@@ -16,7 +16,4 @@ function validate_site() {
 
   xhr.open("GET", input, true);
   xhr.send();
-  } catch (error) {
-    output.textContent = `Error: ${error.message}`;
-  }
 }
