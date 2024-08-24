@@ -11,12 +11,12 @@ function validate_site() {
         try {
           const cookies = document.cookie;
           if (cookies.includes("cf")) {
-            output.textContent = `Response: ${xhr.status} - Cloudflare cookies found.`;
+            output.textContent = `Response: ${xhr.status} - cloudflare cookies encontrados`;
           } else {
-            output.textContent = `Response: ${xhr.status} - No Cloudflare cookies found.`;
+            output.textContent = `Response: ${xhr.status} - cookies não encontrados`;
           }
         } catch (error) {
-          output.textContent = `Response: ${xhr.status} - Cannot access cookies due to security restrictions.`;
+          output.textContent = `Response: ${xhr.status} - não é possivel acessar`;
         }
       } else {
         output.textContent = `Error: ${xhr.status}`;
