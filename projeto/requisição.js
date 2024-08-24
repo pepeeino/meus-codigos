@@ -7,7 +7,17 @@ function validate_site() {
   xhr.onreadystatechange = function () {
     if (xhr.readyState === 4) {
       if (xhr.status === 200) {
-        output.textContent = `Response: ${xhr.status}`;
+        // Tenta acessar os cookies se possível
+        try {
+          const cookies = document.cookie;
+          if (cookies.includes('cf')) {
+            output.textContent = `Response: ${xhr.status} - Cloudflare cookies found.`;
+          } else {
+            output.textContent = `Response: ${xhr.status} - No Cloudflare cookies found.`;
+          }
+        } catch (error) {
+          output.textContent = `Response: ${xhr.status} - Cannot access cookies due to security restrictions.`;
+        }
       } else {
         output.textContent = `Error: ${xhr.status}`;
       }
