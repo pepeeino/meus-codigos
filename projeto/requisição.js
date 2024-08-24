@@ -10,7 +10,7 @@ function validate_site() {
         // Tenta acessar os cookies se possível
         try {
           const cookies = document.cookie;
-          if (cookies.includes('cf')) {
+          if (cookies.includes("cf")) {
             output.textContent = `Response: ${xhr.status} - Cloudflare cookies found.`;
           } else {
             output.textContent = `Response: ${xhr.status} - No Cloudflare cookies found.`;
