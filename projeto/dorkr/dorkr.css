@@ -1,17 +1,15 @@
-/* Corpo */
 body {
   background-color: #000000;
   color: #3c463c;
   font-family: "Courier New", Courier, monospace;
   margin: 0;
-  padding-top: 60px; /* Espaço para a navbar fixa */
+  padding-top: 60px;
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
 }
 
-/* Container do formulário */
 .container {
   display: flex;
   flex-direction: column;
@@ -26,16 +24,14 @@ body {
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.6);
 }
 
-/* Label - Centralizado e cor ajustada */
 label {
-  color: #d3d3d3; /* Cinza bem claro */
+  color: #d3d3d3;
   font-size: 16px;
   margin-bottom: 10px;
-  text-align: center; /* Centraliza o texto do label */
+  text-align: center;
   width: 100%;
 }
 
-/* Estilos dos inputs */
 input[type="text"],
 input[type="file"] {
   width: 100%;
@@ -47,7 +43,6 @@ input[type="file"] {
   margin-bottom: 10px;
 }
 
-/* Botão */
 button {
   padding: 10px;
   border: 2px solid #3c463c;
@@ -63,7 +58,6 @@ button:active {
   border-color: #dfdfdf56;
 }
 
-/* Saída */
 .output {
   width: 100%;
   min-height: 100px;
@@ -75,7 +69,6 @@ button:active {
   padding: 10px;
 }
 
-/* Barra de navegação */
 nav {
   display: flex;
   justify-content: center;
@@ -112,7 +105,6 @@ nav {
   color: #ffcc00;
 }
 
-/* Responsividade */
 @media (max-width: 768px) {
   .nav_list {
     flex-direction: column;
