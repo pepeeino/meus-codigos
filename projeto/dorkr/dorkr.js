@@ -1,5 +1,5 @@
-const API_KEY = "SUA_CHAVE_DE_API";
-const CX = "SEU_CX";
+const API_KEY = "SUA_CHAVE_DE_API"; // Insira sua chave da Bing Search API aqui
+const ENDPOINT = "https://api.cognitive.microsoft.com/bing/v7.0/search";
 
 function processInput() {
   const dorkInput = document.getElementById("dorkInput").value;
@@ -24,14 +24,17 @@ function processInput() {
 }
 
 function searchDork(dork) {
-  const url = `https://www.googleapis.com/customsearch/v1?q=${encodeURIComponent(
-    dork
-  )}&key=${API_KEY}&cx=${CX}`;
+  const url = `${ENDPOINT}?q=${encodeURIComponent(dork)}`;
 
-  fetch(url)
+  fetch(url, {
+    method: "GET",
+    headers: {
+      "Ocp-Apim-Subscription-Key": API_KEY, // Chave de API da Bing Search
+    },
+  })
     .then((response) => response.json())
     .then((data) => {
-      const results = data.items || [];
+      const results = data.webPages.value || [];
       displayResults(results);
     })
     .catch((error) => {
@@ -58,13 +61,13 @@ function displayResults(results) {
     return;
   }
 
-  results.sort((a, b) => a.link.localeCompare(b.link));
+  results.sort((a, b) => a.url.localeCompare(b.url)); // Organizando pelos links
 
   results.forEach((result) => {
     const resultElement = document.createElement("div");
     resultElement.classList.add("result");
     resultElement.innerHTML = `
-      <a href="${result.link}" target="_blank">${result.title}</a>
+      <a href="${result.url}" target="_blank">${result.name}</a>
       <p>${result.snippet}</p>
     `;
     output.appendChild(resultElement);
@@ -72,13 +75,13 @@ function displayResults(results) {
 
   document.getElementById("downloadBtn").style.display = "block";
 
-  window.searchResults = results;
+  window.searchResults = results; // Guardar os resultados para o download
 }
 
 function downloadResults() {
   const results = window.searchResults;
   const fileContent = results
-    .map((result) => `${result.title}\n${result.link}\n`)
+    .map((result) => `${result.name}\n${result.url}\n`)
     .join("\n");
 
   const blob = new Blob([fileContent], { type: "text/plain" });
