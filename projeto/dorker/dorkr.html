@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>by pepeeino</title>
+    <link rel="stylesheet" href="dorkr.css" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul class="nav_list">
+          <li><a href="./dorker/dorkr.html">Dork Test</a></li>
+          <li><a href="../index.html">Cloudflare Cookies</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <div class="container">
+      <form>
+        <label for="dorkInput">Digite o Dork ou selecione um arquivo</label>
+        <input type="text" id="dorkInput" placeholder="Digite o dork..." />
+        <input type="file" id="fileInput" accept=".txt" />
+        <button type="button" onclick="processInput()">Testar</button>
+      </form>
+      <div class="output" id="output"></div>
+    </div>
+    <button id="downloadBtn" style="display: none" onclick="downloadResults()">Baixar Resultados</button>
+  </div>
+    <script src="dorkr.js"></script>
+  </body>
+</html>

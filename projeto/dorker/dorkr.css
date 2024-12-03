@@ -1,3 +1,4 @@
+/* Corpo */
 body {
   background-color: #000000;
   color: #3c463c;
@@ -5,24 +6,38 @@ body {
   margin: 0;
   padding-top: 60px; /* Espaço para a navbar fixa */
   display: flex;
-  justify-content: center; /* Centraliza horizontalmente */
-  align-items: center; /* Centraliza verticalmente */
-  height: 100vh; /* Ocupa toda a altura da tela */
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
 
+/* Container do formulário */
 .container {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   width: 100%;
-  max-width: 600px; /* Limita a largura do formulário */
+  max-width: 600px;
   padding: 20px;
   border: 2px solid #3c463c;
   background-color: #101010;
-  box-sizing: border-box;
+  height: auto;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.6);
 }
 
-input[type="text"] {
+/* Label - Centralizado e cor ajustada */
+label {
+  color: #d3d3d3; /* Cinza bem claro */
+  font-size: 16px;
+  margin-bottom: 10px;
+  text-align: center; /* Centraliza o texto do label */
+  width: 100%;
+}
+
+/* Estilos dos inputs */
+input[type="text"],
+input[type="file"] {
   width: 100%;
   padding: 10px;
   border: 2px solid #eeeeee;
@@ -32,6 +47,7 @@ input[type="text"] {
   margin-bottom: 10px;
 }
 
+/* Botão */
 button {
   padding: 10px;
   border: 2px solid #3c463c;
@@ -47,6 +63,7 @@ button:active {
   border-color: #dfdfdf56;
 }
 
+/* Saída */
 .output {
   width: 100%;
   min-height: 100px;
@@ -65,17 +82,17 @@ nav {
   align-items: center;
   width: 100%;
   background: #2e2e2e;
-  position: fixed; /* Fixa a barra na parte superior */
+  position: fixed;
   top: 0;
   left: 0;
-  z-index: 1000; /* Garante que o menu fique acima do conteúdo */
+  z-index: 1000;
   padding: 10px 0;
 }
 
 .nav_list {
   list-style: none;
   display: flex;
-  gap: 20px; /* Espaço entre os itens */
+  gap: 20px;
   padding: 0;
   margin: 0;
 }
@@ -92,7 +109,7 @@ nav {
 }
 
 .nav_list a:hover {
-  color: #ffcc00; /* Cor ao passar o mouse */
+  color: #ffcc00;
 }
 
 /* Responsividade */
@@ -105,4 +122,20 @@ nav {
   .nav_list a {
     padding: 10px 0;
   }
+}
+
+#downloadBtn {
+  margin-top: 10px;
+  padding: 10px;
+  border: 2px solid #3c463c;
+  background-color: #000000;
+  color: #3c463c;
+  font-family: "Courier New", Courier, monospace;
+  cursor: pointer;
+}
+
+#downloadBtn:active {
+  transform: translateY(-2px) translateX(+1px);
+  transition: 0.3s ease-in-out;
+  border-color: #dfdfdf56;
 }
