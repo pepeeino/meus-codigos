@@ -5,6 +5,9 @@ To use the Dork Tester, you will need an API key, which can be obtained from eit
 ---
 
 ### Scripts in `requisição.js`
+ 
+**choose which one you would use best**
+
 
 #### 1. `validate_site()`
 
