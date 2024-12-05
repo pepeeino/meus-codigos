@@ -95,7 +95,6 @@ nav {
   color: #ffcc00; /* Cor ao passar o mouse */
 }
 
-/* Responsividade */
 @media (max-width: 768px) {
   .nav_list {
     flex-direction: column;
