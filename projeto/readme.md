@@ -5,9 +5,8 @@ To use the Dork Tester, you will need an API key, which can be obtained from eit
 ---
 
 ### Scripts in `requisição.js`
- 
-**choose which one you would use best**
 
+**choose which one you would use best**
 
 #### 1. `validate_site()`
 
@@ -38,3 +37,13 @@ To use the Dork Tester, you will need an API key, which can be obtained from eit
 ### CORS Handling
 
 If you plan to use the Cloudflare cookie finder (`validate_site()`), you will need a **server** to bypass CORS restrictions. This is because browser-based requests may not allow cross-origin access to certain resources due to security policies.
+
+---
+
+### XSS-TESTER
+
+xss-tester needs a lot of adjustments, mainly because I try to use js and python together, and as I don't know Python very well I used an AI for the codes, this could have caused a lot of confusion for me, which could have caused a lot of errors scripts
+
+ps: if you want to help me with that there are my discord: bom_d_mais_ser_monogamico or pepeeino
+
+---

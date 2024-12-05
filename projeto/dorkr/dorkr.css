@@ -1,15 +1,17 @@
+/* Estilo do corpo */
 body {
-  background-color: #000000;
-  color: #3c463c;
+  background-color: #1a1a1a;
+  color: #ffffff; /* Alterado para um contraste mais alto */
   font-family: "Courier New", Courier, monospace;
   margin: 0;
-  padding-top: 60px;
+  padding-top: 60px; /* Espaço para a navbar fixa */
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
 }
 
+/* Container principal */
 .container {
   display: flex;
   flex-direction: column;
@@ -19,11 +21,13 @@ body {
   max-width: 600px;
   padding: 20px;
   border: 2px solid #3c463c;
-  background-color: #101010;
+  background-color: #222;
   height: auto;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.6);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.8); /* Efeito de sombra mais forte */
+  border-radius: 12px; /* Cantos arredondados mais visíveis */
 }
 
+/* Estilo para rótulos */
 label {
   color: #d3d3d3;
   font-size: 16px;
@@ -32,43 +36,57 @@ label {
   width: 100%;
 }
 
+/* Campos de entrada de texto e arquivo */
 input[type="text"],
 input[type="file"] {
   width: 100%;
-  padding: 10px;
-  border: 2px solid #eeeeee;
+  padding: 12px;
+  border: 2px solid #333; /* Cor de borda mais suave */
+  background-color: #000;
+  color: #ffffff;
+  font-family: "Courier New", Courier, monospace;
+  margin-bottom: 12px;
+  border-radius: 6px; /* Cantos mais arredondados */
+}
+
+/* Botões gerais */
+button,
+#downloadBtn {
+  padding: 12px;
+  border: 2px solid #444444;
   background-color: #000000;
   color: #ffffff;
   font-family: "Courier New", Courier, monospace;
-  margin-bottom: 10px;
-}
-
-button {
-  padding: 10px;
-  border: 2px solid #3c463c;
-  background-color: #000000;
-  color: #3c463c;
-  font-family: "Courier New", Courier, monospace;
   cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  border-radius: 6px; /* Arredondamento nos botões */
 }
 
-button:active {
+button:hover,
+#downloadBtn:hover {
+  background-color: #3c463c;
+  color: #000000;
+}
+
+button:active,
+#downloadBtn:active {
   transform: translateY(-2px) translateX(+1px);
-  transition: 0.3s ease-in-out;
   border-color: #dfdfdf56;
 }
 
+/* Área de saída */
 .output {
   width: 100%;
   min-height: 100px;
-  border: 2px solid #ebebeb;
   background-color: #000000;
   color: #ffffff;
   font-family: "Courier New", Courier, monospace;
-  margin-top: 10px;
-  padding: 10px;
+  margin-top: 12px;
+  padding: 12px;
+  border-radius: 2.5px;
 }
 
+/* Barra de navegação */
 nav {
   display: flex;
   justify-content: center;
@@ -79,13 +97,15 @@ nav {
   top: 0;
   left: 0;
   z-index: 1000;
-  padding: 10px 0;
+  padding: 12px 0;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
 }
 
+/* Lista de navegação */
 .nav_list {
   list-style: none;
   display: flex;
-  gap: 20px;
+  gap: 30px;
   padding: 0;
   margin: 0;
 }
@@ -97,14 +117,16 @@ nav {
 .nav_list a {
   color: white;
   text-decoration: none;
-  font-size: 18px;
-  transition: color 0.3s;
+  font-size: 20px; /* Tamanho maior da fonte */
+  transition: color 0.3s, text-shadow 0.3s;
 }
 
 .nav_list a:hover {
   color: #ffcc00;
+  text-shadow: 0 0 10px #ffcc00; /* Brilho ao passar o mouse */
 }
 
+/* Responsividade */
 @media (max-width: 768px) {
   .nav_list {
     flex-direction: column;
@@ -114,20 +136,4 @@ nav {
   .nav_list a {
     padding: 10px 0;
   }
-}
-
-#downloadBtn {
-  margin-top: 10px;
-  padding: 10px;
-  border: 2px solid #3c463c;
-  background-color: #000000;
-  color: #3c463c;
-  font-family: "Courier New", Courier, monospace;
-  cursor: pointer;
-}
-
-#downloadBtn:active {
-  transform: translateY(-2px) translateX(+1px);
-  transition: 0.3s ease-in-out;
-  border-color: #dfdfdf56;
 }
