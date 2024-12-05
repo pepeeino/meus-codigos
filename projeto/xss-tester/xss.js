@@ -7,7 +7,8 @@ form.addEventListener("submit", async (event) => {
 
   try {
     const response = await fetch(
-      "http://127.0.0.1:5000/projeto/xss-tester/request.py",
+      "http://127.0.0.1:5000/projeto/xss-tester/request.py", //here you gonna put where are your request.py,where did you save it//
+
       {
         method: "POST",
         headers: { "Content-Type": "application/json" },
