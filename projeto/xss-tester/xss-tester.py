@@ -1,3 +1,4 @@
+#made with AI, probably contains some errors
 #pip install requests beautifulsoup4
 import requests
 from bs4 import BeautifulSoup
