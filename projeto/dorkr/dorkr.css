@@ -20,7 +20,6 @@ body {
   width: 100%;
   max-width: 600px;
   padding: 20px;
-  border: 2px solid #3c463c;
   background-color: #222;
   height: auto;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.8); /* Efeito de sombra mais forte */
