@@ -1,4 +1,4 @@
-function validate_site() {
+/*function validate_site() {
   const input = document.getElementById("input").value;
   const output = document.getElementById("output");
 
@@ -26,9 +26,9 @@ function validate_site() {
 
   xhr.open("GET", input, true);
   xhr.send();
-}
+}*/
 
-/*function ping_site() {
+function ping_site() {
   const input = document.getElementById("input").value.trim();
   const output = document.getElementById("output");
 
@@ -50,10 +50,9 @@ function validate_site() {
   };
 
   try {
-    xhr.open("HEAD", input, true);  // 'HEAD' faz uma requisição leve para o servidor
+    xhr.open("HEAD", input, true); // 'HEAD' faz uma requisição leve para o servidor
     xhr.send();
   } catch (error) {
     output.textContent = `Error: ${error.message}`;
   }
 }
-*/
