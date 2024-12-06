@@ -9,16 +9,17 @@ app = Flask(__name__)
 def test_xss_payloads(site, payloads):
     results = {}
     for payload in payloads:
-        try:          
+        try:
             url = f"{site}?input={payload}"
-            response = requests.get(url)   
+            response = requests.get(url, timeout=5)
+            response.raise_for_status()
             soup = BeautifulSoup(response.text, 'html.parser')
             if payload in soup.prettify():
                 results[payload] = "Vulnerável (XSS detectado)"
             else:
-                results[payload] = "Não vulnerável (XSS não detectado)"        
-        except Exception as e:
-            results[payload] = f"Erro ao testar: {str(e)}"   
+                results[payload] = "Não vulnerável (XSS não detectado)"
+        except requests.exceptions.RequestException as e:
+            results[payload] = f"Erro na requisição: {str(e)}"
     return results
 
 # Endpoint para receber a URL e testar os payloads
@@ -26,15 +27,12 @@ def test_xss_payloads(site, payloads):
 def process():
     data = request.get_json()
     site = data.get('input')
-    
-    # Carregar payloads (exemplo de lista de payloads)
-    xss_payloads = ["<script>alert(1)</script>", "<img src=x onerror=alert(1)>"]
-    
-    if not site:
-        return jsonify({"status": "error", "message": "URL não fornecida"})
-    
-    resultados = test_xss_payloads(site, xss_payloads)
+    payloads = data.get('payloads', [])
 
+    if not site or not payloads:
+        return jsonify({"status": "error", "message": "URL ou payloads não fornecidos"})
+
+    resultados = test_xss_payloads(site, payloads)
     return jsonify({"status": "success", "result": resultados})
 
 if __name__ == '__main__':
