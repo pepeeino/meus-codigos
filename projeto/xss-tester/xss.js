@@ -28,13 +28,4 @@ function enviarDados() {
       console.error("Erro ao conectar ao servidor:", error);
       alert(`Erro ao conectar ao servidor: ${error.message}`);
     });
-
-      const data = await response.json();
-      outputDiv.innerText =
-        data.status === "success"
-          ? JSON.stringify(data.result, null, 2)
-          : `Erro: ${data.message}`;
-    } catch (error) {
-      outputDiv.innerText = `Erro ao conectar ao servidor: ${error.message}`;
-    }
-  });
+}

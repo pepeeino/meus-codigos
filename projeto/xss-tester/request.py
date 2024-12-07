@@ -4,7 +4,7 @@ from bs4 import BeautifulSoup
 
 app = Flask(__name__)
 
-@app.route('/xss-tester', methods=['POST'])
+@app.route('C:/Users/HP/Desktop/progamaçaõ/projeto/xss-tester/xss-tester.py', methods=['POST'])
 def xss_tester():
     data = request.json  # Recebe dados enviados pelo fetch
     url = data.get('url')
