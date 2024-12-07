@@ -38,10 +38,10 @@ label {
 /* Campos de entrada de texto e arquivo */
 input[type="text"],
 input[type="file"] {
-  width: 100%;
+  width: 97%;
   padding: 12px;
   border: 2px solid #333; /* Cor de borda mais suave */
-  background-color: #000;
+  background-color: #ffffff09;
   color: #ffffff;
   font-family: "Courier New", Courier, monospace;
   margin-bottom: 12px;
