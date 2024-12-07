@@ -1,10 +1,9 @@
 #container {
-  /*em memoria da minha tia avó*/
   background-image: url("./image/images.jfif");
   background-size: cover;
   background-position: center;
-  height: 395px;
-  max-width: 1200vh;
+  height: 800px;
+  max-width: 1400vh;
   justify-content: center;
   align-items: center;
   box-sizing: border-box;
