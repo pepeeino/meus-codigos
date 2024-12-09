@@ -6,7 +6,7 @@ function enviarDados() {
     return;
   }
 
-  fetch('http://127.0.0.1:5000/projeto/xss-tester/xss-tester.py', {
+  fetch('http://127.0.0.1:5000/projeto/xss-tester/endpoint.py', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',

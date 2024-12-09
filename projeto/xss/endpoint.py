@@ -36,19 +36,19 @@ def test_xss_payloads(site, payloads):
 
 @app.route('/xss-tester', methods=['POST'])
 def xss_tester():
-    data = request.json  # Recebe dados enviados pelo Frontend
+    data = request.json  
     url = data.get('url')
-    file_path = data.get('file_path', 'payloads.txt')  # Caminho do arquivo de payloads
+    file_path = data.get('file_path', 'payloads.txt')  
 
     if not url:
         return jsonify({"message": "URL não fornecida.", "status": "error"}), 400
 
-    # Carrega os payloads
+
     payloads = carregar_payloads(file_path)
     if not payloads:
         return jsonify({"message": "Nenhum payload encontrado.", "status": "error"}), 400
 
-    # Realiza os testes XSS
+
     resultados = test_xss_payloads(url, payloads)
 
     return jsonify({"message": "Teste concluído.", "status": "success", "resultados": resultados})
